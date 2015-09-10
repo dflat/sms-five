@@ -1,0 +1,9 @@
+"AHEPA, Chapter 155","P.O. Box 1002, Hopewell, Va. 23860","P.O. Box 1002","Hopewell","Va","23860","N-12-1230-13993",1230,
+"CBT","210 Giant Drive Richmond, VA 23224","210 Giant Drive","Richmond","Va","23224",,,0.02
+"Culpeper Lions","P.O. Box 777, Culpeper, Va. 22701","P.O. Box 777","Culpeper","Va","22701","N-12-0550-14000",550,0.02
+"East Rivanna","3501 Steamer Dr. Keswick, Va. 22947","3501 Steamer Dr","Keswick","Va","22947","E-12-0117-13856",117,
+"FC Richmond","1365 Overbrook Rd","1365 Overbrook Rd",,,,"3278",3278,
+"Jerusalem Connection","210 Giant Drive, Richmond, Va. 23224","210 Giant Drive","Richmond","Va","23224","N-12-1330-13681",1330,0.02
+"Richmond Gymnastics","10701 Trade Rd. Richmond, Va. 23236","10701 Trade Rd","Richmond","Va","23236","N-12-2477-13774",2477,
+"St. Joseph Catholic School","123 Franklin St., Petersburg, Va. 23803","123 Franklin St","Petersburg","Va","23803","N-13-1763-14173",,0.00
+"VIGS","2400 Oak Lake Blvd. Midlothian, Va. 23112","2400 Oak Lake Blvd","Midlothian","Va","23112","N-12-2507-13758",2507,
