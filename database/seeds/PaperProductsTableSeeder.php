@@ -14,7 +14,9 @@ class PaperProductsTableSeeder extends Seeder
 
 		$rows = [];
 
-		$file = fopen("http://salesmanager.dev/files/db csv files/Paper Information.txt","r");
+		$publicPath = public_path();
+
+		$file = fopen($publicPath . "/files/db csv files/Paper Information.txt","r");
 		while(! feof($file))
 		  {
 		  $rows[]=(fgetcsv($file));

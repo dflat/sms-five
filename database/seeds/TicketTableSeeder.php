@@ -17,7 +17,9 @@ class TicketTableSeeder extends Seeder
 
 		$rows = [];
 
-		$file = fopen("http://salesmanager.dev/files/TicketInformation.txt","r");
+		$publicPath = public_path();
+
+		$file = fopen($publicPath . "/files/TicketInformation.txt","r");
 		while(! feof($file))
 		  {
 		  $rows[]=(fgetcsv($file));
