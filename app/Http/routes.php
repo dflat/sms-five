@@ -119,6 +119,7 @@ Route::group(['prefix' => 'invoice'], function() {
 	Route::resource('master', 'MasterInvoicesController');
 	Route::resource('tickets', 'TicketInvoicesController');
 	Route::resource('paper', 'PaperInvoicesController');
+	Route::post('/machines/count/edit', 'ElectronicsController@editCount');
 	Route::get('/machines/{id}/upload', 'ElectronicsController@upload');
 
 	//Route::get('/machines/{id}/{report}',['as'=>'machines.report','uses'=>'MachineInvoicesController@show']);

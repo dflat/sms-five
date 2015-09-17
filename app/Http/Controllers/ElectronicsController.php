@@ -649,6 +649,29 @@ class ElectronicsController extends Controller {
 
 		return redirect()->back();
 	}
+
+
+	public function editCount(Request $request){
+
+		
+		//dd('hello');
+		$line_id = $request->get('pk');
+	    //get the new marks
+	    $new_count = $request->get('value');
+	    //get the Student Data Row to be updated with new marks
+	    $invoiceLine = MachineInvoiceLineItem::whereId($line_id)->first();
+	    $invoiceLine->sold_count = $new_count;
+	    $invoiceLine->save();
+	    //$this->str_id = 51;
+	    //$this->updateInvoiceTotalFee();
+	    //dd('lol');
+
+	    
+	    return redirect()->back();
+
+
+	}
+
 	public function doStuff(){
 		//these are hardcoded for testing
 		$this->org_id = 2;

@@ -14,7 +14,9 @@ class OrganizationsTableSeeder extends Seeder
 
 		$rows = [];
 
-		$file = fopen("http://salesmanager.dev/files/db csv files/Charity.txt","r");
+		$pubPath = public_path();
+
+		$file = fopen($pubPath . "/files/db csv files/Charity.txt","r");
 		while(! feof($file))
 		  {
 		  $rows[]=(fgetcsv($file));

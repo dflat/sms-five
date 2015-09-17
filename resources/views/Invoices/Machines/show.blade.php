@@ -1,7 +1,13 @@
 @extends('sandbox.navi')
 
 @section('imports')
+
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
 <script type="text/javascript" src="/js/DomManipulationHelpers.js"></script>
+
+<link href="{{ asset('/css/bootstrap-editable.css') }}" rel="stylesheet">
+<script src="/js/bootstrap-editable.min.js"></script>
 @stop
 
 @section('content')
@@ -127,7 +133,51 @@
 </div>
 
 <script type="text/javascript">
+
 	$("#{{Input::get('report')}}").addClass('selected-report-btn');
+
+	$.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        	}
+		});
+
+
+
+	$('.can-edit').editable({
+    type: 'text',
+    pk: 1,
+    url: '{{URL::to("/")}}/invoice/machines/count/edit',
+    title: 'Edit Sold Count',
+    success: function() {
+  					location.reload();
+
+			}
+	});
+
+// 	$(function(){
+
+	
+
+       
+       
+//         $('.can-edit').editable({
+//             validate: function(value) {
+//                 if($.trim(value) == '') 
+//                     return 'Value is required.';
+//         },
+//         type: 'text',
+//         url:'{{URL::to("/")}}/invoice/machines/count/edit',  
+//         title: 'Edit Count',
+//         placement: 'top', 
+//         send:'always',
+//         ajaxOptions: {
+//         dataType: 'json'
+//         }
+//      })
+// });
 </script>
+
+
 
 @stop

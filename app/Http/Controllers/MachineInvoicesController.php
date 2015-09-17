@@ -179,4 +179,22 @@ class MachineInvoicesController extends Controller {
 
 	}
 
+	// public function editCount(Request $request){
+
+		
+	// 	//dd('hello');
+	// 	$line_id = $request->get('pk');
+	//     //get the new marks
+	//     $new_count = $request->get('value');
+	//     //get the Student Data Row to be updated with new marks
+	//     $invoiceLine = MachineInvoiceLineItem::whereId($line_id)->first();
+	//     $invoiceLine->sold_count = $new_count;
+	//     $invoiceLine->save();
+
+	    
+	//     return redirect()->back();
+
+
+	// }
+
 }

@@ -18,7 +18,7 @@
 					<tr class="line-item">
 						<td>{{$line->line_name}}</td>
 						<td>${{$line->price}}</td>
-						<td>{{$line->sold_count}}</td>
+						<td><a class="can-edit" href="#" data-type="text" data-pk="{{$line->id}}">{{$line->sold_count}}</a></td>
 						
 						<td>${{($line->sold_count * $line->price)}}</td>
 					</tr>
@@ -45,7 +45,7 @@
 					<tr class="line-item">
 						<td>{{$line->line_name}}</td>
 						<td>${{$line->price}}</td>
-						<td>{{$line->sold_count}}</td>
+						<td><a class="can-edit" href="#" data-type="text" data-pk="{{$line->id}}">{{$line->sold_count}}</a></td>
 						
 						<td>${{($line->sold_count * $line->price)}}</td>
 					</tr>
@@ -126,4 +126,11 @@
 				
 	</tbody>
 </table>
+
+<script type="text/javascript">
+
+
+
+</script>
+
 </hr>
