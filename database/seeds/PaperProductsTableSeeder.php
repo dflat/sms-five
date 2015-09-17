@@ -30,14 +30,14 @@ class PaperProductsTableSeeder extends Seeder
 
 			PaperProduct::create(
 			[
-			'name' => $row[1],
-			'form' => $row[0],
-			'price' => (float)$price,
+			'name' => $row[1] ?: test,
+			'form' => $row[0] ?: testForm,
+			'price' => (float)$price ?: 2.0,
 			'cost' => 4.99,
-			'sheet_count' => (int)$row[5],
-			'sheets_up' => $row[2],
-			'faces_on' => $row[3],
-			'color' => $row[4],
+			'sheet_count' => (int)$row[5] ?: 1 ,
+			'sheets_up' => $row[2] ?: 1,
+			'faces_on' => $row[3] ?: 1,
+			'color' => $row[4] ?: 'none',
 			'qoh' => 0
 			]);
 		}
