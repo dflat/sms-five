@@ -31,13 +31,13 @@ class TicketTableSeeder extends Seeder
 			Ticket::create(
 			[
 			'user_id' => $faker->randomElement($users),
-			'name' => $row[0],
-			'form' => $row[1],
+			'name' => $row[0] ?: 'test',
+			'form' => $row[1] ?: 'formTest',
 			'price' => $row[4],
 			'cost' => 2.99,
-			'ticket_count' => (int)$row[3],
-			'take_in' => $row[3],
-			'pay_out' => $row[6],
+			'ticket_count' => (int)$row[3] ?: 1,
+			'take_in' => $row[3] ?: 23 ,
+			'pay_out' => $row[6] ?: 23,
 			'qoh' => 0
 			]);
 		}
