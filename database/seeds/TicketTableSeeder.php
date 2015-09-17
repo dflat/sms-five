@@ -28,7 +28,6 @@ class TicketTableSeeder extends Seeder
 		fclose($file);
 
 		foreach ($rows as $row){
-			dd($row[0]);
 			Ticket::create(
 			[
 			'user_id' => $faker->randomElement($users),
