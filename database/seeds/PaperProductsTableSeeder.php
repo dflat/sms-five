@@ -17,10 +17,10 @@ class PaperProductsTableSeeder extends Seeder
 		$publicPath = public_path();
 
 		$file = fopen($publicPath . "/files/db csv files/Paper Information.txt","r");
-		while(! feof($file))
-		  {
-		  $rows[]=(fgetcsv($file));
-		  }
+		// while(! feof($file))
+		//   {
+		  while($rows[]=(fgetcsv($file))){};
+		  // }
 
 		fclose($file);
 
