@@ -32,7 +32,7 @@ class MachineInvoicesController extends Controller {
 
 		$organizations = Organization::lists('name','id');
 		//dd($invoices);
-		return view('invoices.machines.index', compact('invoices','organizations'));
+		return view('Invoices.Machines.index', compact('invoices','organizations'));
 	}
 
 	/**
@@ -131,7 +131,7 @@ class MachineInvoicesController extends Controller {
 		}
 		//dd($invoice);
 		//$invoiceAndItems = $invoice->with('line_items')->latest()->get();
-		return view('invoices.machines.show', compact('invoice','lines','ticketInvoice','paperInvoice','str'));
+		return view('Invoices.Machines.show', compact('invoice','lines','ticketInvoice','paperInvoice','str'));
 	}
 
 	/**
@@ -174,7 +174,7 @@ class MachineInvoicesController extends Controller {
 		$reports = StateTransactionReport::with('line_items')
 								->where('org_id', $org)
 								->get();
-		return view('reports.electronics.show', compact('reports', 'organization'));
+		return view('Reports.Electronics.show', compact('reports', 'organization'));
 		//return view('reports.electronics', compact('reports'));
 
 	}

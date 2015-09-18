@@ -31,7 +31,7 @@ class PaperInvoicesController extends Controller {
 
 		$organizations = Organization::lists('name','id');
 		//dd($invoices);
-		return view('invoices.paper.index', compact('invoices','organizations'));
+		return view('Invoices.Paper.index', compact('invoices','organizations'));
 	}
 
 	/**
@@ -102,7 +102,7 @@ class PaperInvoicesController extends Controller {
 						->get();
 		//dd($invoice);
 		//$invoiceAndItems = $invoice->with('line_items')->latest()->get();
-		return view('invoices.paper.show', compact('invoice','lines'));
+		return view('Invoices.Paper.show', compact('invoice','lines'));
 		//return [$invoice,$lines];
 		//return $lines;
 
@@ -129,7 +129,7 @@ class PaperInvoicesController extends Controller {
 						->get();
 		//dd($invoice);
 		//$invoiceAndItems = $invoice->with('line_items')->latest()->get();
-		return view('invoices.paper.edit', compact('invoice','lines'));
+		return view('Invoices.Paper.edit', compact('invoice','lines'));
 	}
 
 	/**
@@ -155,12 +155,12 @@ class PaperInvoicesController extends Controller {
 	}
 
 	public function inspect(){
-		return view('invoices.paper.inspect');
+		return view('Invoices.Paper.inspect');
 
 	}
 
 	public function metrics(){
-		return view('invoices.paper.metrics');
+		return view('Invoices.Paper.metrics');
 		
 	}
 

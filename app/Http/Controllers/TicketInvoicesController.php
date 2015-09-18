@@ -32,7 +32,7 @@ class TicketInvoicesController extends Controller {
 
 		$organizations = Organization::lists('name','id');
 		//dd($invoices);
-		return view('invoices.tickets.index', compact('invoices','organizations'));
+		return view('Invoices.Tickets.index', compact('invoices','organizations'));
 	}
 
 	/**
@@ -104,7 +104,7 @@ class TicketInvoicesController extends Controller {
 						->get();
 		//dd($invoice);
 		//$invoiceAndItems = $invoice->with('line_items')->latest()->get();
-		return view('invoices.tickets.show', compact('invoice','lines'));
+		return view('Invoices.Tickets.show', compact('invoice','lines'));
 		//return [$invoice,$lines];
 		//return $lines;
 
@@ -131,7 +131,7 @@ class TicketInvoicesController extends Controller {
 						->get();
 		//dd($invoice);
 		//$invoiceAndItems = $invoice->with('line_items')->latest()->get();
-		return view('invoices.tickets.edit', compact('invoice','lines'));
+		return view('Invoices.Tickets.edit', compact('invoice','lines'));
 	}
 
 	/**
@@ -157,12 +157,12 @@ class TicketInvoicesController extends Controller {
 	}
 
 	public function inspect(){
-		return view('invoices.tickets.inspect');
+		return view('Invoices.Tickets.inspect');
 
 	}
 
 	public function metrics(){
-		return view('invoices.tickets.metrics');
+		return view('Invoices.Tickets.metrics');
 		
 	}
 

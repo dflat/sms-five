@@ -29,7 +29,7 @@ class ReportsController extends Controller {
 
 		// dd($rows);
 
-		return view('reports.tickets.profit');
+		return view('Reports.Tickets.profit');
 	}
 
 	/**
@@ -133,7 +133,7 @@ class ReportsController extends Controller {
 
 		// })->download('xls');
 
-		return view('reports.tickets.state', compact('report'));
+		return view('Reports.Tickets.State', compact('report'));
 
 	}
 	public function profitsByPeriod(){

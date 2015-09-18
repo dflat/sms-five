@@ -93,7 +93,7 @@ class MasterInvoicesController extends Controller {
 		$after_discount = $consumables_total - ($consumables_total * $organization->discount);
 		$discount_percent = $organization->discount * 100;
 
-		return view('invoices.master.show', compact('ticketInvoice', 'paperInvoice','total_take_in','total_pay_out','total_profit','ticket_total','paper_total','organization','consumables_total','after_discount','discount_percent', 'sale_date'));
+		return view('Invoices.Master.show', compact('ticketInvoice', 'paperInvoice','total_take_in','total_pay_out','total_profit','ticket_total','paper_total','organization','consumables_total','after_discount','discount_percent', 'sale_date'));
 
 		
 

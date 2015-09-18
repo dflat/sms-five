@@ -23,7 +23,7 @@ class OrganizationsController extends Controller {
 	public function index()
 	{
 		$organizations = Organization::all();
-		return view('organizations.index', compact('organizations'));
+		return view('Organizations.index', compact('organizations'));
 
 	}
 
@@ -34,7 +34,7 @@ class OrganizationsController extends Controller {
 	 */
 	public function create()
 	{
-		return view('organizations.create');
+		return view('Organizations.create');
 	}
 
 	/**
@@ -72,7 +72,7 @@ class OrganizationsController extends Controller {
 	{
 		$organization = Organization::findOrFail($id);
 
-		return view('organizations.edit', compact('organization'));
+		return view('Organizations.edit', compact('organization'));
 
 	}
 
@@ -114,7 +114,7 @@ class OrganizationsController extends Controller {
 		// 									}])
 									
 		// 							->get();
-		return view('organizations.setup', compact('org_id'));
+		return view('Organizations.setup', compact('org_id'));
 	}
 
 	public function getProducts($id){

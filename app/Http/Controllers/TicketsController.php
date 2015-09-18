@@ -25,7 +25,7 @@ class TicketsController extends Controller {
 		$tickets = Ticket::latest()->get();
 
 		//return $tickets;  //switch these two .. just for sandbox returning tickets as json
-		return view('tickets.index',compact('tickets'));
+		return view('Tickets.index',compact('tickets'));
 
 	}
 
@@ -36,7 +36,7 @@ class TicketsController extends Controller {
 	 */
 	public function create()
 	{
-		return view('tickets.create');
+		return view('Tickets.create');
 	}
 
 	/**
@@ -68,7 +68,7 @@ class TicketsController extends Controller {
 		$ticket = Ticket::findOrFail($id);
 		$unsold_inventory = $ticket->inventory()->where('sold', 0)->get();
 
-		return view('tickets.show', compact('ticket', 'unsold_inventory'));
+		return view('Tickets.show', compact('ticket', 'unsold_inventory'));
 
 	}
 
@@ -81,7 +81,7 @@ class TicketsController extends Controller {
 	public function edit($id)
 	{
 		$ticket = Ticket::findOrFail($id);
-		return view('tickets.edit', compact('ticket'));
+		return view('Tickets.edit', compact('ticket'));
 
 	}
 
@@ -119,7 +119,7 @@ class TicketsController extends Controller {
 		$tickets = Ticket::orderBy($term, 'asc')->get();
 
 		//dd($tickets);
-		return view('tickets.index',compact('tickets'));
+		return view('Tickets.index',compact('tickets'));
 
 	}
 
@@ -128,7 +128,7 @@ class TicketsController extends Controller {
 		$inventory = $ticket->inventory()->paginate(5);//get();
 		//return $inventory;
 		//$ticekt = Ticket::orderBy('created_at', 'desc')->paginate(10);
-		return view('tickets.inventory',compact('inventory','ticket'));
+		return view('Tickets.inventory',compact('inventory','ticket'));
 
 	}
 
