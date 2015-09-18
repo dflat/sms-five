@@ -133,7 +133,7 @@ class ReportsController extends Controller {
 
 		// })->download('xls');
 
-		return view('Reports.Tickets.State', compact('report'));
+		return view('Reports.Tickets.state', compact('report'));
 
 	}
 	public function profitsByPeriod(){

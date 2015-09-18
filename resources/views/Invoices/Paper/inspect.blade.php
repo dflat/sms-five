@@ -7,6 +7,6 @@
 @stop
 
 @section('content')
-@include('invoices.paper.paperInvoicesANG')
+@include('Invoices.Paper.paperInvoicesANG')
 @stop		
 		

@@ -7,6 +7,6 @@
 @stop
 
 @section('content')
-@include('invoices.tickets.ticketInvoicesANG')
+@include('Invoices.Tickets.ticketInvoicesANG')
 @stop		
 		
