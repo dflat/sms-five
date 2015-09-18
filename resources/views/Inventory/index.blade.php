@@ -6,7 +6,7 @@
 @stop
 
 @section('content')
-@include('inventory.inventoryANG')
+@include('Inventory.inventoryANG')
 @stop		
 		
 

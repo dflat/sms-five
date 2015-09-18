@@ -8,8 +8,7 @@ use Illuminate\Database\Seeder;
 */
 class ElectronicProductsTableSeeder extends Seeder
 {
-	//protected $file_dir = "http://salesmanager.dev/files/";
-	protected $file_dir = public_path() . "/files/";
+	protected $file_dir = "http://salesmanager.dev/files/";
 	protected $report_code;
 	protected $start_term;
 	protected $end_term;
